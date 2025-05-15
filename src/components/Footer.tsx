@@ -1,146 +1,62 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram, Youtube, Tv } from 'lucide-react';
+import { Tv, Instagram, Facebook, Twitter } from 'lucide-react';
 
 const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+  
   return (
-    <footer className="bg-gray-950 py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-          <div className="md:col-span-1">
-            <a href="/" className="flex items-center space-x-2">
-              <Tv className="h-8 w-8 text-blue-500" />
-              <span className="text-2xl font-bold text-white">
-                R<span className="text-blue-500">TV</span>
-              </span>
-            </a>
-            <p className="mt-4 text-gray-400">
-              Your premium IPTV service with the best channels and on-demand content from around the world.
+    <footer className="bg-black text-gray-400">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="col-span-1 md:col-span-2">
+            <div className="flex items-center mb-4">
+              <Tv className="h-7 w-7 text-rose-500" />
+              <span className="ml-2 text-xl font-bold text-white">UltraStream</span>
+            </div>
+            <p className="mb-4">
+              The ultimate IPTV experience with 80,000+ movies and TV shows. Stream your favorite content anywhere, anytime on any device.
             </p>
-            <div className="mt-6 flex space-x-4">
-              <a
-                href="https://facebook.com/rtv"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-gray-400 transition-colors hover:bg-blue-600 hover:text-white"
-                aria-label="Facebook"
-              >
-                <Facebook size={18} />
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Facebook className="h-5 w-5" />
               </a>
-              <a
-                href="https://twitter.com/rtv"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-gray-400 transition-colors hover:bg-blue-600 hover:text-white"
-                aria-label="Twitter"
-              >
-                <Twitter size={18} />
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Twitter className="h-5 w-5" />
               </a>
-              <a
-                href="https://instagram.com/rtv"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-gray-400 transition-colors hover:bg-blue-600 hover:text-white"
-                aria-label="Instagram"
-              >
-                <Instagram size={18} />
-              </a>
-              <a
-                href="https://youtube.com/rtv"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-gray-400 transition-colors hover:bg-blue-600 hover:text-white"
-                aria-label="Youtube"
-              >
-                <Youtube size={18} />
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Instagram className="h-5 w-5" />
               </a>
             </div>
           </div>
           
           <div>
-            <h3 className="mb-4 text-lg font-semibold text-white">Quick Links</h3>
+            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li>
-                <a href="/" className="text-gray-400 transition-colors hover:text-blue-500">Home</a>
-              </li>
-              <li>
-                <a href="/live" className="text-gray-400 transition-colors hover:text-blue-500">Live TV</a>
-              </li>
-              <li>
-                <a href="/movies" className="text-gray-400 transition-colors hover:text-blue-500">Movies</a>
-              </li>
-              <li>
-                <a href="/sports" className="text-gray-400 transition-colors hover:text-blue-500">Sports</a>
-              </li>
-              <li>
-                <a href="/guide" className="text-gray-400 transition-colors hover:text-blue-500">TV Guide</a>
-              </li>
+              <li><a href="#features" className="hover:text-white transition-colors">Features</a></li>
+              <li><a href="#content" className="hover:text-white transition-colors">Content</a></li>
+              <li><a href="#pricing" className="hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="#testimonials" className="hover:text-white transition-colors">Testimonials</a></li>
+              <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="mb-4 text-lg font-semibold text-white">Support</h3>
+            <h3 className="text-white font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
-              <li>
-                <a href="/faq" className="text-gray-400 transition-colors hover:text-blue-500">FAQ</a>
-              </li>
-              <li>
-                <a href="/help" className="text-gray-400 transition-colors hover:text-blue-500">Help Center</a>
-              </li>
-              <li>
-                <a href="/account" className="text-gray-400 transition-colors hover:text-blue-500">Account</a>
-              </li>
-              <li>
-                <a href="/community" className="text-gray-400 transition-colors hover:text-blue-500">Community</a>
-              </li>
-              <li>
-                <a href="/contact" className="text-gray-400 transition-colors hover:text-blue-500">Contact Us</a>
-              </li>
+              <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Installation Guide</a></li>
+              <li><a href="#contact" className="hover:text-white transition-colors">Contact Us</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
             </ul>
-          </div>
-          
-          <div>
-            <h3 className="mb-4 text-lg font-semibold text-white">Download Our App</h3>
-            <p className="text-gray-400">
-              Watch on the go with our mobile apps. Available on iOS and Android.
-            </p>
-            <div className="mt-4 flex flex-col space-y-2">
-              <a
-                href="https://apps.apple.com/app/rtv"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded bg-gray-800 px-4 py-2 text-center text-white transition-colors hover:bg-gray-700"
-              >
-                iOS App
-              </a>
-              <a
-                href="https://play.google.com/store/apps/details?id=com.rtv"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded bg-gray-800 px-4 py-2 text-center text-white transition-colors hover:bg-gray-700"
-              >
-                Android App
-              </a>
-            </div>
           </div>
         </div>
         
-        <hr className="my-8 border-gray-800" />
-        
-        <div className="flex flex-col items-center justify-between space-y-4 text-center md:flex-row md:text-left">
-          <p className="text-gray-500">
-            &copy; {new Date().getFullYear()} RTV. All rights reserved.
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p>© {currentYear} UltraStream IPTV. All rights reserved.</p>
+          <p className="text-sm mt-2">
+            This service is for personal use only. UltraStream does not host any content. We only provide access to existing streams.
           </p>
-          <div className="flex space-x-6">
-            <a href="/privacy" className="text-gray-500 transition-colors hover:text-blue-500">
-              Privacy Policy
-            </a>
-            <a href="/terms" className="text-gray-500 transition-colors hover:text-blue-500">
-              Terms of Use
-            </a>
-            <a href="/cookies" className="text-gray-500 transition-colors hover:text-blue-500">
-              Cookie Policy
-            </a>
-          </div>
         </div>
       </div>
     </footer>

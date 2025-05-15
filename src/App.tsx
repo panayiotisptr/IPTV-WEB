@@ -1,24 +1,32 @@
-import React from 'react';
-import Header from './components/Header';
+import React, { useEffect } from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import ContentShowcase from './components/ContentShowcase';
+import Pricing from './components/Pricing';
+import Testimonials from './components/Testimonials';
+import FAQ from './components/FAQ';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-
-// Navigation links for the header
-const navLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'Live TV', href: '/live' },
-  { label: 'Movies', href: '/movies' },
-  { label: 'Sports', href: '/sports' },
-  { label: 'TV Guide', href: '/guide' },
-  { label: 'On Demand', href: '/on-demand' },
-];
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
+  useEffect(() => {
+    document.title = 'UltraStream IPTV - 80,000+ Movies & Shows';
+  }, []);
+
   return (
-    <div className="min-h-screen bg-gray-950 text-white">
-      <Header links={navLinks} />
-      <Home />
+    <div className="min-h-screen bg-black text-white">
+      <Navbar />
+      <main>
+        <Hero />
+        <ContentShowcase />
+        <Pricing />
+        <Testimonials />
+        <FAQ />
+        <Contact />
+      </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
